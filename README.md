@@ -28,47 +28,37 @@ cp .env.example .env
 ### Colocar Modelo
 
 Coloque o modelo treinado em:
+
 ```
-app/models/modelo_pulmonares.keras
+/modelos/saved_models/pasta_do_modelo/
+com os arquivos 'config.json', 'info_modelo.json' e 'modelo.keras'
 ```
 
 ### Executar
 
 ```bash
-# Desenvolvimento
-uvicorn app.main:app --reload
 
-# Produção
-uvicorn app.main:app --host 0.0.0.0 --port 8000
-```
+python manage.py runserver
 
-### Docker
-
-```bash
-# Build
-docker build -t pulmovision-api .
-
-# Run
-docker run -p 8000:8000 pulmovision-api
-
-# Ou com docker-compose
-docker-compose up
 ```
 
 ## Documentação
 
 Acesse a documentação interativa:
+
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
 ## Endpoints
 
 ### 1. Health Check
+
 ```bash
 GET /health
 ```
 
 ### 2. Predição (Principal)
+
 ```bash
 POST /predict
 Content-Type: multipart/form-data
@@ -81,23 +71,15 @@ curl -X POST "http://localhost:8000/predict" \\
 ```
 
 ### 3. Informações do Modelo
+
 ```bash
 GET /model
 ```
 
 ### 4. Limitações
+
 ```bash
 GET /limitations
-```
-
-## Testes
-
-```bash
-# Executar testes
-pytest
-
-# Com coverage
-pytest --cov=app tests/
 ```
 
 ## Exemplo de Uso
