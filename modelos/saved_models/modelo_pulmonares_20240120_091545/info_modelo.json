@@ -1,0 +1,10 @@
+{
+  "nome": "PulmoVision ChestXRay v2",
+  "arquitetura": "EfficientNetB0",
+  "versao": "1.1",
+  "data_treinamento": "2024-01-20",
+  "acuracia_validacao": 0.94,
+  "dataset_size": 5000,
+  "epocas": 30,
+  "observacoes": "Modelo com data augmentation aprimorado"
+}

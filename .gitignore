@@ -4,29 +4,9 @@ __pycache__/
 *$py.class
 *.so
 .Python
-
-# Virtual Environment
 venv/
 env/
 ENV/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-
-# Logs
-*.log
-logs/
-
-# Tests
-.pytest_cache/
-.coverage
-htmlcov/
-
-# OS
-.DS_Store
-Thumbs.db
 
 # Django
 *.log
@@ -36,4 +16,14 @@ media/
 staticfiles/
 
 # Modelos ML
-modelos/saved_models/
+modelos/saved_models/*.keras
+!modelos/saved_models/.gitkeep
+
+# Ambiente
+.env
+.vscode/
+.idea/
+
+# Logs
+logs/*.log
+!logs/.gitkeep
