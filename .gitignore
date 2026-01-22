@@ -16,8 +16,7 @@ media/
 staticfiles/
 
 # Modelos ML
-modelos/saved_models/*.keras
-!modelos/saved_models/.gitkeep
+# modelos/saved_models/
 
 # Ambiente
 .env
